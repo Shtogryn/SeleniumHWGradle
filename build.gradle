@@ -17,11 +17,11 @@ dependencies {
     compile 'com.opencsv:opencsv:4.5'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
 }
-task gmailTest(type:Test) {
-    def threadNum = System.getProperty("threaCount", "2").toInteger()
+task threadCount(type: Test) {
+    def threadNum = System.getProperty("threaCount", "1").toInteger()
     System.out.println(threadNum)
-    useTestNG(){
-        suites("src\\test\\java\\testng.xml")
+    useTestNG() {
+        suites("src/test/java/testng.xml")
         parallel = "methods"
         threadCount = threadNum
     }
