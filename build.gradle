@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.shtohryn'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    compile 'com.opencsv:opencsv:4.5'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
+}
+task gmailTest(type:Test) {
+    def threadNum = System.getProperty("threaCount", "2").toInteger()
+    System.out.println(threadNum)
+    useTestNG(){
+        suites("src\\test\\java\\testng.xml")
+        parallel = "methods"
+        threadCount = threadNum
+    }
+}
