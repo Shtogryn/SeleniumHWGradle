@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.shtohryn.CreateAndSendDraftMessage" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-02-26T12:44:12" hostname="DESKTOP-DPG0KL2" time="27.301">
+  <properties/>
+  <testcase name="test[0](tom.shtogryn.2004, Hardasarock2019)" classname="com.shtohryn.CreateAndSendDraftMessage" time="27.301"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1) on port 32434
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+]]></system-err>
+</testsuite>

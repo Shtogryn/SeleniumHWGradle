@@ -17,8 +17,12 @@ dependencies {
     compile 'com.opencsv:opencsv:4.5'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
 }
+test {
+    useTestNG(){
+    }
+}
 task threadCount(type: Test) {
-    def threadNum = System.getProperty("threaCount", "1").toInteger()
+    def threadNum = System.getProperty("threaCount", "5").toInteger()
     System.out.println(threadNum)
     useTestNG() {
         suites("src/test/java/testng.xml")
